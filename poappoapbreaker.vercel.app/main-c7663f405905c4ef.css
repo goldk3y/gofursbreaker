@@ -1,0 +1,166 @@
+@font-face {
+    font-family: Rubik;
+    src: url(/static/Rubik-VariableFont_wght.ttf)format("truetype")
+}
+
+body {
+    -webkit-user-select: none;
+    user-select: none;
+    text-transform: uppercase;
+    background: #000;
+    margin: 0;
+    font-family: Rubik, sans-serif;
+    font-weight: 700
+}
+
+canvas {
+    z-index: 10
+}
+
+.header {
+    color: #fff;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    margin: 10px 10px 5px;
+    display: flex
+}
+
+.header.full {
+    margin: 45px 10px 5px
+}
+
+.game-container {
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: calc(100vh - 120px);
+    max-height: calc(100dvh - 120px);
+    margin: 0 auto;
+    display: flex;
+    position: relative
+}
+
+.game-container.full {
+    height: 100vh
+}
+
+.loading-hint {
+    text-align: center;
+    width: 100vw;
+    font-size: 30px;
+    font-weight: 700;
+    position: fixed;
+    top: 50%;
+    left: 0
+}
+
+canvas {
+    touch-action: none;
+    width: 100%
+}
+
+#ballImage {
+    width: 24px;
+    height: 24px;
+    transform: translateY(4px)
+}
+
+#nBall {
+    margin-left: 10px;
+    font-size: 24px
+}
+
+#poapImage {
+    z-index: -1;
+    width: 1px;
+    position: fixed;
+    bottom: 0;
+    left: 0
+}
+
+#logoImage {
+    width: 50%;
+    height: auto
+}
+
+#level {
+    font-size: 20px
+}
+
+.settings {
+    position: absolute;
+    bottom: 0;
+    right: 0
+}
+
+.settings .toggle-btn {
+    z-index: 998;
+    cursor: pointer;
+    background-color: #0000;
+    border: none;
+    padding: 0;
+    font-size: 24px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px
+}
+
+.settings .inputs {
+    color: #fff;
+    background: #202020c0;
+    flex-direction: column;
+    gap: 30px;
+    width: 250px;
+    padding: 30px 15px 50px;
+    font-size: 24px;
+    display: flex
+}
+
+.speed-setting {
+    align-items: center;
+    display: flex
+}
+
+.inputs label {
+    margin-right: 10px
+}
+
+.size-setting input {
+    width: 40px;
+    margin: 0 15px;
+    font-size: 24px
+}
+
+.speed-setting input {
+    flex-grow: 1
+}
+
+.game-over-mask {
+    z-index: 999;
+    background: #202020c0;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: absolute
+}
+
+.foobar {
+    flex-grow: .382
+}
+
+.game-over-info {
+    text-align: center;
+    background: #f0f0f0;
+    border: 2px solid;
+    border-radius: 10px;
+    padding: 0 45px 10px;
+    font-size: 24px
+}
+
+#restart {
+    cursor: pointer;
+    margin-left: 15px;
+    font-weight: 700
+}
